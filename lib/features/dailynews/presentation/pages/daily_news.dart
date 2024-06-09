@@ -4,7 +4,7 @@ import 'package:millie/features/dailynews/presentation/bloc/article/remote/remot
 import 'package:millie/features/dailynews/presentation/bloc/article/remote/remote_article_state.dart';
 
 class DailyNews extends StatelessWidget {
-  const DailyNews({Key? key}) : super(key: key);
+  const DailyNews({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class DailyNews extends StatelessWidget {
         return ListView.builder(
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text("${index}"),
+              title: Text("${state.articles![index].content}"),
             );
           },
           itemCount: state.articles!.length,
